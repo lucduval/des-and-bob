@@ -128,7 +128,7 @@ function RiddleDialog({
             autoFocus
             value={answer}
             onChange={(e) => setAnswer(e.target.value)}
-            className="mt-3 w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-zinc-50 outline-none placeholder:text-zinc-500 focus:border-[#c8a24e]/60 focus:ring-2 focus:ring-[#c8a24e]/15"
+            className="mt-3 w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-zinc-50 outline-none placeholder:text-zinc-500"
           />
         </label>
 
@@ -245,10 +245,10 @@ function PageContents() {
       case "welcome":
       case "riddle_1":
         return {
-          headline: `Welcome ${displayName} to an evening with Des & Bob`,
-          lede: "A South African safari evening, in a private-club tone we have not earned.",
-          body: "Lantern vibes. Linen energy. Zero actual wildlife.",
-        };
+          headline: `Welcome ${displayName} to an Evening with Des & Bob`,
+          lede: "A South African safari. Minus the danger. Plus the steak.",
+          body: "Tomahawk confidence. Linen outfits. Absolutely no wildlife involvement."
+        }
       case "meet_hosts":
       case "riddle_main":
         return {
@@ -258,17 +258,17 @@ function PageContents() {
         };
       case "main_details":
         return {
-          headline: "Main course",
-          lede: "Placeholder: main course details.",
-          body: "Savory. Unapologetic. Paired with confident eye contact.",
-        };
+  headline: "Main course",
+  lede: "Thoughtfully prepared. Confidently presented.",
+  body: "Savory, assured, and not open for discussion."
+};
       case "riddle_dessert":
       case "dessert_details":
-        return {
-          headline: "Dessert",
-          lede: "Placeholder: dessert details.",
-          body: "Sweet, dramatic, and presented with unnecessary suspense.",
-        };
+       return {
+  headline: "Dessert",
+  lede: "We didn’t have to do this.",
+  body: "But here we are."
+};
       case "success":
         return {
           headline: "RSVP complete",
