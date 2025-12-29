@@ -2,7 +2,7 @@
 
 import { ConvexProvider, ConvexReactClient, useMutation, useQuery } from "convex/react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useMemo, useReducer, useRef, useState } from "react";
+import { Suspense, useEffect, useMemo, useReducer, useRef, useState } from "react";
 import { api } from "../convex/_generated/api";
 
 type Step =
@@ -483,7 +483,9 @@ export default function Home() {
 
   return (
     <ConvexProvider client={convex}>
-      <PageContents />
+      <Suspense fallback={<div className="min-h-screen bg-[#0b0b0b]" />}>
+        <PageContents />
+      </Suspense>
     </ConvexProvider>
   );
 }
